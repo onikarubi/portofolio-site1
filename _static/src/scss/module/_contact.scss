@@ -1,0 +1,20 @@
+/*---------------- contact -------------------*/
+
+.contact {
+	width: 100%;
+	margin-bottom: 0;
+	background-color: #f7f7f7;
+
+	&__inner {
+		text-align: center;
+		padding: 80px 0;
+	}
+
+	&__heading {
+		margin-bottom: 35px;
+	}
+
+	&__body {
+		margin-bottom: 31px;
+	}
+}

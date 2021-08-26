@@ -1,0 +1,54 @@
+@use '../global' as global;
+
+.news-page {
+  margin-top: 60px;
+  margin-bottom: 110px;
+
+  @include global.mq(sm) {
+    margin-top: 40px;
+    margin-bottom: 80px;
+  }
+
+  &__body {
+    width: 100%;
+    max-width: 910px;
+    margin: 0 auto;
+    padding-left: 20px;
+    padding-right: 20px;
+  }
+
+  &__footer {
+    margin-top: 40px;
+  }
+}
+
+.pagenation {
+  
+  &__item {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+  }
+
+  &__link {
+    display: inline-block;
+    text-decoration: none;
+    width: 45px;
+    height: 45px;
+    line-height: 45px;
+    border-radius: 50%;
+    text-align: center;
+    font-family: global.$en-font;
+    font-size: 20px;
+    font-weight: bold;
+    background: transparent linear-gradient(180deg, #7633A4 0%, #250D65 100%) 0% 0% no-repeat padding-box;
+    color: #fff;
+    margin-right: 5px;
+    margin-left: 5px;
+
+    &.--current {
+      background: #F1EBF8;
+      color: #4F31A5;
+    }
+  }
+}

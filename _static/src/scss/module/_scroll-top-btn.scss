@@ -1,0 +1,47 @@
+@use '../global' as global;
+
+$button-size-pc: 50px;
+$button-size-sp: 45px;
+
+@mixin topButton() {
+	width: $button-size-pc;
+	height: $button-size-pc;
+	line-height: $button-size-pc;
+
+	@include global.mq(sm) {
+		width: $button-size-sp;
+		height: $button-size-sp;
+		line-height: $button-size-sp;
+	}
+}
+
+.page-top {
+	position: fixed;
+	bottom: 45px;
+	right: 45px;
+  z-index: map-get(global.$layer, "floating");
+  transition: all .3s;
+  opacity: 0;
+  
+  &--active {
+    transition: all .3s;
+    opacity: 1;
+  }
+
+	@include global.mq(sm) {
+		right: 20px;
+		bottom: 20px;
+	}
+
+	&__button {
+		@include topButton();
+		text-align: center;
+		display: inline-block;
+		background-color: #391e88;
+		border-radius: 50%;
+
+		.fa-arrow-up {
+			color: #fff;
+		}
+	}
+}

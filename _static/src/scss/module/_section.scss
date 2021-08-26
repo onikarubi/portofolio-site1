@@ -1,0 +1,47 @@
+@use '../global' as global;
+
+.section {
+  margin-bottom: 140px;
+  max-width: 100%;
+
+  @include global.mq(sm) {
+    margin-bottom: 80px;
+  }
+}
+
+.section-title {
+  font-size: 36px;
+  color: global.$main-color;
+  letter-spacing: .72px;
+  font-weight: bold;
+  font-family: global.$en-font;
+  margin-bottom: 5px;
+  text-transform: uppercase;
+
+  @include global.mq(sm) {
+    text-align: center;
+  }
+
+  &__page {
+    font-size: 32px;
+    margin-bottom: 0;
+    letter-spacing: 1.6px;
+    color: global.$main-color;
+
+    @include global.mq(sm) {
+      font-size: 24px;
+    }
+  }
+}
+
+.section-subtitle {
+  font-weight: 600;
+  font-size: 13px;
+  letter-spacing: 1.3px;
+  color: global.$main-color;
+  margin-bottom: 30px;
+
+  @include global.mq(sm) {
+    text-align: center;
+  }
+}

@@ -1,0 +1,250 @@
+@use '../global' as global;
+
+.recruit-page {
+  background: url(../../img/bg-geometry.png) repeat top center / 50%;
+}
+
+.recruit-concept {
+  margin-top: 110px;
+  margin-bottom: 70px;
+
+  @include global.mq(sm) {
+    margin: 40px 0;
+  }
+
+  &__inner {
+    margin: 0 auto;
+    padding: 0 30px;
+    max-width: 1110px;
+    text-align: center;
+
+    @include global.mq(sm) {
+      padding: 0 20px;
+    }
+  }
+
+  &__heading {
+    margin-bottom: 40px;
+  }
+
+  &__title-area {
+    margin-bottom: 40px;
+    color: global.$main-color;
+
+    @include global.mq(sm) {
+      margin-bottom: 25px;
+    }
+  }
+
+  &__title {
+    font-size: 72px;
+    font-weight: bold;
+    font-family: global.$en-font;
+    letter-spacing: .72px;
+    margin-bottom: 15px;
+
+    @include global.mq(sm) {
+      font-size: 48px;
+      letter-spacing: .48px;
+      line-height: 1.166666;
+    }
+  }
+
+  &__subtitle {
+    font-size: 32px;
+    letter-spacing: 1.6px;
+
+    @include global.mq(sm) {
+      font-size: 18px;
+      letter-spacing: .9px;
+    }
+  }
+
+  &__text {
+    font-size: 16px;
+    letter-spacing: .8px;
+    line-height: 1.75;
+
+    @include global.mq(sm) {
+      font-size: 15px;
+      letter-spacing: .75px;
+      line-height: 1.8;
+    }
+  }
+
+  &__image {
+    width: 100%;
+    height: 779px;
+    clip-path: polygon(0 15%, 100% 0%, 100% 85%, 0 100%);
+
+    @include global.mq(sm) {
+      height: 290px;
+    }
+
+    img {
+      height: 100%;
+      object-fit: cover;
+    }
+  }
+}
+
+.recruit-job {
+  margin-bottom: 140px;
+
+  @include global.mq(sm) {
+    margin-bottom: 80px;
+  }
+
+  &__title {
+    text-align: center;
+    margin-bottom: 40px;
+
+    @include global.mq(sm) {
+      margin-bottom: 30px;
+    }
+  }
+
+  &__inner {
+    max-width: 1140px;
+    margin: 0 auto;
+    padding: 0 30px;
+
+    @include global.mq(sm) {
+      padding: 0 20px;
+    }
+  }
+
+
+}
+
+.job-category {
+  background: #fff;
+  padding: 60px 91px;
+
+  @include global.mq(sm) {
+    padding: 30px 20px;
+  }
+
+  &__title {
+    text-align: center;
+    font-family: global.$en-font;
+    font-size: 24px;
+    font-weight: bold;
+    letter-spacing: 1.2px;
+
+    @include global.mq(sm) {
+      color: global.$main-color;
+      font-size: 16px;
+      letter-spacing: .8px;
+    }
+  }
+
+  &__content {
+    margin-top: 18px;
+    max-width: 100%;
+    margin-bottom: 50px;
+
+    @include global.mq(sm) {
+      margin-top: 20px;
+      margin-bottom: 40px;
+    }
+  }
+
+  &__table {
+    text-align: left;
+
+    tr {
+      display: flex;
+      align-items: center;
+      padding: 30px 20px;
+      border-bottom: solid 1px #DDDDDD;
+
+      &:last-child {
+        align-items: flex-start;
+      }
+
+      @include global.mq(sm) {
+        display: block;
+        padding: 16px 0;
+      }
+    }
+
+    th {
+      display: block;
+      font-size: 15px;
+      font-weight: bold;
+      letter-spacing: .75px;
+      min-width: calc(67px + 97px);
+
+      @include global.mq(sm) {
+        font-size: 14px;
+        letter-spacing: .7px;
+        margin-bottom: 10px;
+      }
+    }
+
+    td {
+      font-size: 15px;
+      letter-spacing: .75px;
+      font-family: global.$en-font;
+      line-height: 1.8;
+
+      @include global.mq(sm) {
+        font-size: 14px;
+        letter-spacing: .7px;
+        line-height: 1.64;
+      }
+    }
+  }
+
+  &__footer {
+    text-align: center;
+  }
+
+  &__link {
+    margin-bottom: 10px;
+
+    &-text {
+      font-size: 12px;
+      letter-spacing: .6px;
+      font-family: global.$en-font;
+    }
+  }
+}
+
+.recruit-video {
+  margin-bottom: 110px;
+
+  @include global.mq(sm) {
+    margin-bottom: 80px;
+  }
+
+  &__inner {
+    padding: 0 30px;
+    margin: 0 auto;
+    max-width: 1110px;
+
+    @include global.mq(sm) {
+      padding: 0 20px;
+    }
+  }
+
+  &__title {
+    margin-bottom: 40px;
+    text-align: center;
+
+    @include global.mq(sm) {
+      margin-bottom: 30px;
+    }
+  }
+}
+
+.video-content {
+  width: 100%;
+  height: 624px;
+  background: #EBEBEB;
+
+  @include global.mq(sm) {
+    height: 188px;
+  }
+}

@@ -1,0 +1,148 @@
+@use '../global' as global;
+
+/*---------------- heroarea -------------------*/
+
+.heroarea {
+	background: url(../../img/hero.jpg) no-repeat top center / cover;
+	height: 768px;
+	position: relative;
+	box-sizing: content-box;
+  padding-top: 65px;
+	margin-bottom: 70px;
+
+  @include global.mq(sm) {
+    background: url(../../img/hero.jpg) no-repeat center center / cover;
+	}
+
+	&--pages {
+		height: calc(240px - 65px);
+		margin-bottom: 0;
+		padding-top: 89px;
+	}
+}
+
+.heroarea__inner {
+	text-align: center;
+	position: absolute;
+	top: 50%;
+	transform: translateY(-50%);
+	left: 0;
+	right: 0;
+
+	@include global.mq(sm) {
+		text-align: left;
+		padding-left: 50px;
+	}
+
+	&--pages {
+		bottom: 0;
+		transform: none;
+		top: auto;
+		margin-bottom: 70px;
+
+		@include global.mq(sm) {
+			text-align: center;
+			padding: 0;
+		}
+	}
+}
+
+.heroarea__heading {
+	margin-bottom: 50px;
+	color: #fff;
+
+	@include global.mq(sm) {
+		margin-bottom: 45px;
+	}
+}
+
+.heroarea__title {
+	font-size: 72px;
+	font-weight: bold;
+	font-family: global.$en-font;
+	margin-bottom: 24px;
+
+	@include global.mq(sm) {
+		font-size: 48px;
+		line-height: 1.3;
+		margin-bottom: 20px;
+	}
+}
+
+.heroarea__subtitle {
+	font-size: 24px;
+	font-weight: 600;
+	text-shadow: 0px 3px 6px #9926c429;
+	letter-spacing: 3px;
+
+	@include global.mq(sm) {
+		font-size: 16px;
+		line-height: 1.8;
+		letter-spacing: 1.73px;
+	}
+}
+
+.heroarea-scroll__text {
+  position: absolute;
+  overflow: hidden;
+	bottom: 0;
+	right: 22px;
+	font-size: 12px;
+	font-weight: bold;
+	letter-spacing: 0.96px;
+  font-family: global.$en-font;
+  color: #fff;
+  display: inline-block;
+  writing-mode: vertical-lr;
+  padding-bottom: 90px;
+
+  &::after {
+    content: '';
+    display: inline-block;
+    position: absolute;
+    bottom: 0;
+    height: 80px;
+    width: 1px;
+    background-color: #fff;
+    left: 50%;
+    animation: scrollLine 1s ease infinite;
+  }
+}
+
+.page {
+	color: #fff;
+
+	&__title {
+		font-weight: bold;
+		font-family: global.$en-font;
+		font-size: 36px;
+		letter-spacing: 1.8px;
+		margin-bottom: 5px;
+		text-transform: uppercase;
+	}
+
+	&__subtitle {
+		font-size: 14px;
+		font-weight: bold;
+		letter-spacing: .7px;
+	}
+}
+
+@keyframes scrollLine {
+  0% {
+    transform: scale(1, 0);
+    transform-origin: 0 0;
+  }
+  50% {
+    transform: scale(1, 1);
+    transform-origin: 0 0;
+  }
+  50.1% {
+    transform: scale(1, 1);
+    transform-origin: 0 100%;
+  }
+  100% {
+    transform: scale(1, 0);
+    transform-origin: 0 100%;
+  }
+}

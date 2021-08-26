@@ -1,0 +1,92 @@
+@use './media' as global;
+
+@mixin Button(
+  $width,
+  $height: 60px,
+  $color: #fff,
+  $background,
+  $border-color: transparent,
+  $border-radius: 50px,
+  $font-size,
+  $letter-spacing,
+  $font-weight: bold,
+) {
+  font-size: $font-size;
+  width: $width;
+  height: $height;
+  color: $color;
+  background: $background;
+  border: solid 1px $border-color;
+  border-radius: $border-radius;
+  display: inline-block;
+  text-align: center;
+  line-height: $height;
+  letter-spacing: $letter-spacing;
+  font-weight: $font-weight;
+}
+
+.btn {
+  position: relative;
+  transition: ease .3s;
+  &::after {
+    content: '\f0da';
+    font-family: "Font Awesome 5 Free";
+    position: absolute;
+    right: 35px;
+    font-size: 18px;
+    transition: ease .3s;
+    top: 50%;
+    transform: translateY(-50%);
+  }
+
+  &:hover {
+    opacity: 1;
+    cursor: pointer;
+
+    &::after {
+      right: 30px;
+    }
+  }
+
+  &--submit {
+    &:hover {
+      opacity: .8;
+    }
+  }
+
+
+  &--transparent {
+    @include Button(
+      $width: 220px,
+      $background: transparent,
+      $border-color: #fff,
+      $font-size: 15px,
+      $letter-spacing: .75px
+    );
+  }
+
+  &--more {
+    @include Button(
+      $width: 200px,
+      $background: transparent linear-gradient(90deg, #7633A4 0%, #250D65 100%),
+      $font-size: 14px,
+      $letter-spacing: .7px
+    );
+    text-transform: uppercase;
+  }
+
+  &--location {
+    @include Button(
+      $width: 220px,
+      $background: transparent linear-gradient(90deg, #7633A4 0%, #250D65 100%),
+      $font-size: 15px,
+      $letter-spacing: .75px
+    );
+
+    @include global.mq(sm) {
+      width: 200px;
+      font-size: 14px;
+      letter-spacing: .7px;
+    }
+  }
+}

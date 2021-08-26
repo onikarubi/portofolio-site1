@@ -1,0 +1,13 @@
+@use '../global/index' as st;
+
+body {
+  font-size: st.$text-size;
+  font-family: st.$ja-font;
+  letter-spacing: .75px;
+  max-width: 100%;
+  margin: 0 auto;
+}
+
+html, body {
+  height: 100%;
+}

@@ -1,0 +1,181 @@
+@use '../global' as global;
+
+.contact-form {
+  margin: 70px 0;
+  
+  @include global.mq(sm) {
+    margin: 40px 0;
+  }
+
+	&__inner {
+		margin: 0 auto;
+		max-width: calc(1110px + 30px * 2);
+		padding: 0 30px;
+
+		@include global.mq(sm) {
+			padding: 0 20px;
+		}
+	}
+
+	&__title {
+		font-size: 16px;
+    letter-spacing: 0.8px;
+    font-weight: 300;
+    text-align: center;
+
+    @include global.mq(sm) {
+      font-size: 14px;
+      letter-spacing: .7px;
+      line-height: 1.64;
+    }
+  }
+  
+  &__wrapper {
+    margin-top: 40px;
+
+    @include global.mq(sm) {
+      margin-top: 30px;
+    }
+  }
+
+  &__body {
+    background-color: #F7F7F7;
+    padding: 90px;
+
+    @include global.mq(sm) {
+      padding: 30px;
+    }
+  }
+}
+
+.form-group {
+  margin-bottom: 30px;
+
+  &:last-child {
+    margin-bottom: 0;
+  }
+
+  span {
+    display: block;
+  }
+
+  &__heading {
+    display: flex;
+    align-items: center;
+    margin-bottom: 15px;
+  }
+
+  &__label {
+    font-size: 16px;
+    letter-spacing: .8px;
+    font-weight: bold;
+
+    @include global.mq(sm) {
+      font-size: 15px;
+      letter-spacing: .75px;
+      line-height: 1.6;
+      max-width: 200px;
+    }
+  }
+
+  &__required {
+    font-size: 12px;
+    letter-spacing: .6px;
+    color: #391E88;
+    margin-left: 10px;
+    font-weight: bold;
+  }
+
+  &__warning {
+    color: #333333;
+    font-size: 12px;
+    letter-spacing: .6px;
+  }
+
+  &__body {
+    display: flex;
+    align-items: center;
+
+    @include global.mq(sm) {
+      display: block;
+    }
+  }
+
+  &__input {
+    width: 300px;
+    height: 40px;
+    border: solid 1px #AAAAAA;
+    border-radius: 6px;
+    font-size: 14px;
+    letter-spacing: .7px;
+
+    @include global.mq(sm) {
+      width: 100%;
+    }
+  }
+
+  &__number {
+    width: 200px;
+  }
+
+  &__textarea {
+    width: 600px;
+    height: 255px;
+    resize: none;
+  }
+
+  &__select {
+    width: 300px;
+    height: 40px;
+    padding-left: 18px;
+    border: solid 1px #AAAAAA;
+    border-radius: 6px;
+    appearance: none;
+
+    &:hover {
+      cursor: pointer;
+      opacity: .8;
+    }
+  }
+
+  &__submit {
+    text-align: center;
+    margin-top: 50px;
+  }
+}
+
+.radio-item {
+  display: flex;
+  align-items: flex-end;
+  margin-right: 35px;
+
+  &:last-child {
+    margin-right: 0;
+  }
+
+  @include global.mq(sm) {
+    margin-bottom: 10px;
+    margin-right: 0;
+
+    &:last-child {
+      margin-bottom: 0;
+    }
+  }
+}
+
+.input-radio {
+  margin: 0;
+  display: block;
+  width: 18px;
+  height: 18px;
+
+  &__text {
+    font-size: 14px;
+    letter-spacing: .7px;
+    line-height: 18px;
+    display: block;
+    margin-left: 5px;
+  }
+}
+
+

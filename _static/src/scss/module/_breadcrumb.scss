@@ -1,0 +1,62 @@
+@use '../global' as global;
+
+.breadcrumb {
+	background-color: #f7f7f7;
+	height: 45px;
+	width: 100%;
+
+	@include global.mq(sm) {
+		height: 25px;
+	}
+
+	&__inner {
+		margin: 0 auto;
+		max-width: 1170px;
+		padding-left: 20px;
+		padding-right: 20px;
+	}
+
+	&__list {
+		overflow: hidden;
+		text-overflow: ellipsis;
+		white-space: nowrap;
+	}
+
+	&__text {
+		font-family: global.$en-font;
+		font-size: 12px;
+		letter-spacing: 0.6px;
+		line-height: 45px;
+		text-transform: uppercase;
+    max-width: 100%;
+
+		@include global.mq(sm) {
+			font-size: 11px;
+			letter-spacing: 0.55px;
+			line-height: 25px;
+		}
+
+		&:last-child,
+		&:nth-child(2) {
+			padding-left: 20px;
+			position: relative;
+
+			&::after {
+				content: ">";
+				position: absolute;
+				display: inline-block;
+				text-align: center;
+				left: 0;
+				transform: translateX(50%);
+			}
+		}
+
+		&-link {
+			color: #391e88;
+
+			&:hover {
+				text-decoration: underline;
+			}
+		}
+	}
+}

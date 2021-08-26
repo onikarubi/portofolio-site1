@@ -1,0 +1,14 @@
+@use '../global' as global;
+
+.message-text {
+  font-size: 15px;
+  font-weight: 300;
+  line-height: 1.8;
+  letter-spacing: .75px;
+
+  @include global.mq(sm) {
+    font-size: 14px;
+    line-height: 1.78;
+    letter-spacing: .7px;
+  }
+}

@@ -1,0 +1,16 @@
+@use '../global' as global;
+
+#swiper01 {
+  &.swiper-container {
+    padding-bottom: 21px;
+  }
+
+  .swiper-pagination-bullet {
+    background-color: global.$main-color;
+  }
+}
+
+#swiper01 .swiper-pagination {
+  bottom: 0;
+  text-align: right;
+}

@@ -1,0 +1,29 @@
+
+//マップ型変数breakpointsを定義
+$breakpoints: (
+	//キー　　値
+	"sm": "screen and (max-width: 767px)",
+	"tab": "screen and (min-width: 768px) and (max-width: 1024px)",  //1024px以下768px以上(タブレットのみの表示)
+	"md": "screen and (min-width: 768px)" //768px以上（タブレット・PC）用の表示
+) !default;
+
+//メディアクエリ用のmixinを定義。デフォ値はmd
+@mixin mq($breakpoint: md) {
+	//map-get(マップ型変数, キー)で値を取得
+	@media #{map-get($breakpoints, $breakpoint)} {
+		//この中をカスタムできる
+		@content;
+	}
+}
+
+.is-pc {
+	@include mq(sm) {
+		display: none;
+	}
+}
+
+.is-sp {
+	@include mq(md) {
+		display: none;
+	}
+}
